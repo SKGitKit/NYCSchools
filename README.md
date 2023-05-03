@@ -16,8 +16,6 @@ To get started with the app, simply clone the repository and open it in Android 
 
 - [Koin](https://insert-koin.io/) for dependency injection.
 - [Retrofit](https://square.github.io/retrofit/) for networking.
-- [Glide](https://github.com/bumptech/glide) for image loading.
-- [MockWebServer](https://github.com/square/okhttp/tree/master/mockwebserver) for testing.
 
 ## Screenshots
 
