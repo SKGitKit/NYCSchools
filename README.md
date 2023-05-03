@@ -21,7 +21,8 @@ To get started with the app, simply clone the repository and open it in Android 
 
 ## Screenshots
 
-![Screenshot 1]([screenshots/screenshot1.png](https://user-images.githubusercontent.com/123601466/236017898-56d8def4-0e7f-4689-a73f-a13ac2b41493.PNG")) ![Screenshot 2](https://user-images.githubusercontent.com/123601466/236017910-ff9cd0b1-f4ae-430d-8396-89c21723155f.PNG)
+<img src="screenshots/screenshot1.png" alt="Screenshot 1" width="400"> <img src="https://user-images.githubusercontent.com/123601466/236017910-ff9cd0b1-f4ae-430d-8396-89c21723155f.PNG" alt="Screenshot 2" width="400">
+
 
 ## License
 
