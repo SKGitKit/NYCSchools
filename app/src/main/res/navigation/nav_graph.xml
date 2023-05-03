@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/schoolFragment">
+
+    <fragment
+        android:id="@+id/schoolFragment"
+        android:name="com.khanappsnj.nycschools.SchoolFragment"
+        android:label="SchoolFragment" >
+        <action
+            android:id="@+id/action_getSchoolDetail"
+            app:destination="@id/schoolDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolDetailFragment"
+        android:name="com.khanappsnj.nycschools.SchoolDetailFragment"
+        android:label="SchoolDetailFragment" >
+        <argument
+            android:name="dbn"
+            app:argType="string" />
+        <argument android:name="schoolIndex"
+            app:argType="integer" />
+    </fragment>
+</navigation>
