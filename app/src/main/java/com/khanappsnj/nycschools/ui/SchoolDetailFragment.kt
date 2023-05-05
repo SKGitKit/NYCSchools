@@ -9,7 +9,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
-import com.khanappsnj.nycschools.SchoolDetailFragmentArgs
 import com.khanappsnj.nycschools.viewmodel.SchoolViewModel
 import com.khanappsnj.nycschools.databinding.SchoolDetailBinding
 import kotlinx.coroutines.launch

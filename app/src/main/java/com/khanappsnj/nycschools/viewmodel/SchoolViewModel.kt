@@ -29,11 +29,6 @@ class SchoolViewModel(private val client: SchoolApi) : ViewModel() {
     val scores
         get() = _scores
 
-    // Flag to check if all schools have been retrieved
-    private val _schoolsRetrieved = MutableLiveData<Boolean>(false)
-    val schoolsRetrieved
-        get() = _schoolsRetrieved
-
     // The currently selected school
     private var _currentSchool: SchoolItem? = null
     val currentSchool
@@ -48,8 +43,7 @@ class SchoolViewModel(private val client: SchoolApi) : ViewModel() {
     init {
         viewModelScope.launch {
             loadSchools()
-            Log.d(TAG, "Initializing viewmodel")
-            schoolsRetrieved.postValue(true)
+            Log.d(TAG, "Initializing SchoolViewModel")
         }
     }
 
@@ -60,7 +54,6 @@ class SchoolViewModel(private val client: SchoolApi) : ViewModel() {
             if (schoolResponse.isSuccessful) {
                 schoolList.postValue(schoolResponse.body())
                 _searchSchoolList.postValue(schoolResponse.body())
-                _schoolsRetrieved.postValue(true)
             } else {
                 Log.d(TAG, "Response came back unsuccessful")
             }

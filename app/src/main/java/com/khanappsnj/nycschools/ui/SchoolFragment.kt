@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.navigation.fragment.findNavController
 import com.khanappsnj.nycschools.adapter.SchoolAdapter
-import com.khanappsnj.nycschools.SchoolFragmentDirections
 import com.khanappsnj.nycschools.viewmodel.SchoolViewModel
 import com.khanappsnj.nycschools.databinding.SchoolListBinding
+
 /**
  * Fragment responsible for displaying the list of schools and handling user search queries.
  * Uses SchoolViewModel to fetch data from the repository and populate the RecyclerView with
@@ -55,6 +55,9 @@ class SchoolFragment : Fragment() {
                         )
                     )
                 }
+                progressBar.visibility = View.GONE
+                linearLayout.visibility = View.VISIBLE
+
                 searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
                         searchView.clearFocus()
@@ -67,15 +70,6 @@ class SchoolFragment : Fragment() {
                     }
 
                 })
-            }
-        }
-
-        // Show the progress bar while data is being fetched from the repository
-        // Hide the progress bar and show the list once the data has been retrieved
-        schoolViewModel.schoolsRetrieved.observe(requireActivity()) {
-            binding.apply {
-                progressBar.visibility = View.GONE
-                linearLayout.visibility = View.VISIBLE
             }
         }
     }
