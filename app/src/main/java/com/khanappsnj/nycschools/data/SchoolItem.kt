@@ -1,4 +1,4 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.data
 
 data class SchoolItem(
     val academicopportunities1: String,

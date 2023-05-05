@@ -1,4 +1,4 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.navigation.fragment.findNavController
+import com.khanappsnj.nycschools.adapter.SchoolAdapter
+import com.khanappsnj.nycschools.SchoolFragmentDirections
+import com.khanappsnj.nycschools.viewmodel.SchoolViewModel
 import com.khanappsnj.nycschools.databinding.SchoolListBinding
 /**
  * Fragment responsible for displaying the list of schools and handling user search queries.

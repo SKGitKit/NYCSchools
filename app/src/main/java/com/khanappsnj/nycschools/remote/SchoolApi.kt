@@ -1,5 +1,7 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.remote
 
+import com.khanappsnj.nycschools.data.SATScoresItem
+import com.khanappsnj.nycschools.data.SchoolItem
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/schoolFragment"
-        android:name="com.khanappsnj.nycschools.SchoolFragment"
+        android:name="com.khanappsnj.nycschools.ui.SchoolFragment"
         android:label="SchoolFragment" >
         <action
             android:id="@+id/action_getSchoolDetail"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/schoolDetailFragment"
-        android:name="com.khanappsnj.nycschools.SchoolDetailFragment"
+        android:name="com.khanappsnj.nycschools.ui.SchoolDetailFragment"
         android:label="SchoolDetailFragment" >
         <argument
             android:name="dbn"

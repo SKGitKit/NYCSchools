@@ -1,4 +1,4 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.data
 
 import com.google.gson.annotations.SerializedName
 

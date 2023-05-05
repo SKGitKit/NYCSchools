@@ -1,7 +1,6 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
+import com.khanappsnj.nycschools.SchoolDetailFragmentArgs
+import com.khanappsnj.nycschools.viewmodel.SchoolViewModel
 import com.khanappsnj.nycschools.databinding.SchoolDetailBinding
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -1,7 +1,8 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.khanappsnj.nycschools.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

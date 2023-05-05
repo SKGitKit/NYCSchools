@@ -1,4 +1,4 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

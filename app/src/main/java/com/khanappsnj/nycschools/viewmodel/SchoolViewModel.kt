@@ -1,16 +1,19 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.khanappsnj.nycschools.remote.SchoolApi
+import com.khanappsnj.nycschools.data.SATScoresItem
+import com.khanappsnj.nycschools.data.SchoolItem
 import kotlinx.coroutines.launch
-
-private const val TAG = "SchoolViewModel"
 
 /**
  * View model for the [SchoolFragment] and [SchoolDetailFragment] fragments.
  */
+private const val TAG = "SchoolViewModel"
+
 class SchoolViewModel(private val client: SchoolApi) : ViewModel() {
 
     // List of all schools retrieved from the API

@@ -1,8 +1,9 @@
-package com.khanappsnj.nycschools
+package com.khanappsnj.nycschools.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.khanappsnj.nycschools.data.SchoolItem
 import com.khanappsnj.nycschools.databinding.SchoolListItemBinding
 
 /**
