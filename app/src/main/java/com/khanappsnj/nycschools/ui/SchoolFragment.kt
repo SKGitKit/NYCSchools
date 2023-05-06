@@ -51,7 +51,8 @@ class SchoolFragment : Fragment() {
                     findNavController().navigate(
                         SchoolFragmentDirections.actionGetSchoolDetail(
                             dbn = school.dbn,
-                            schoolIndex = index
+                            schoolIndex = index,
+                            description = school.overview_paragraph
                         )
                     )
                 }

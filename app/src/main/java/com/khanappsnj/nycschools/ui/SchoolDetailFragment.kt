@@ -1,5 +1,6 @@
 package com.khanappsnj.nycschools.ui
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +10,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
+import com.khanappsnj.nycschools.BuildConfig
 import com.khanappsnj.nycschools.viewmodel.SchoolViewModel
 import com.khanappsnj.nycschools.databinding.SchoolDetailBinding
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 /**
  * Fragment that displays the details of a selected school, including its name,
@@ -53,16 +57,31 @@ class SchoolDetailFragment : Fragment() {
                 schoolViewModel.loadScore(args.dbn, args.schoolIndex)
                 val scores = schoolViewModel.scores
                 val school = schoolViewModel.currentSchool
+                val longitude = school?.longitude
+                val latitude = school?.latitude
+                val apiKey = BuildConfig.MAPS_API_KEY
+                val locationMapUrl =
+                    "https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=${18}&size=${400}x${400}&markers=color:red%7Clabel:A%7C${latitude},${longitude}&key=$apiKey"
+
+                val locationStreetUrl =
+                    "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=$latitude,$longitude&fov=90&heading=235&pitch=10&key=$apiKey"
+
 
                 // Update the UI with the loaded data
                 binding.apply {
-                    Name.text = "School Name:\n${school?.school_name}"
-                    Math.text = "MATH: ${scores?.satMathAvgScore}"
-                    Reading.text = "READING: ${scores?.satCriticalReadingAvgScore}"
-                    Writing.text = "WRITING: ${scores?.satWritingAvgScore}"
-                    NumTestTakers.text = "Number of Test Takers : ${scores?.numOfSatTestTakers}"
-                    Location.text = "Location : ${school?.location?.substringBefore('(')}"
-                    TotalStudents.text = "Total Students : ${school?.total_students}"
+                    textViewSchoolName.text = "${school?.school_name}"
+                    textViewMath.text = "MATH: ${scores?.satMathAvgScore}"
+                    textViewReading.text = "READING: ${scores?.satCriticalReadingAvgScore}"
+                    textViewWriting.text = "WRITING: ${scores?.satWritingAvgScore}"
+                    textViewNumTestTakers.text = "${scores?.numOfSatTestTakers}"
+                    textViewLocation.text = "${school?.location?.substringBefore('(')}"
+                    textViewTotalStudents.text = "${school?.total_students}"
+                    textViewDescription.text = "${args.description}"
+
+                    Glide.with(requireActivity()).apply {
+                        load(locationMapUrl).into(imageViewMap)
+                        load(locationStreetUrl).into(imageViewSchool)
+                    }
                 }
             }
         }

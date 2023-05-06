@@ -8,7 +8,9 @@ class SchoolHolder(val binding: SchoolListItemBinding) : RecyclerView.ViewHolder
 
     fun bind(school: SchoolItem, onRowClick: (SchoolItem, Int) -> Unit, index:Int) {
         binding.apply {
-            schoolTv.text = school.school_name
+            textViewSchoolName.text = "${school.school_name}"
+            textViewSchoolAdd.text = "Primary Address: ${school.primary_address_line_1}"
+            textViewSchoolPhone.text = "Phone: ${school.phone_number}"
             root.setOnClickListener {
                 onRowClick(school,index)
             }
