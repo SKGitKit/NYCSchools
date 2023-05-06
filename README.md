@@ -16,10 +16,13 @@ To get started with the app, simply clone the repository and open it in Android 
 
 - [Koin](https://insert-koin.io/) for dependency injection.
 - [Retrofit](https://square.github.io/retrofit/) for networking.
+- [Glide](https://github.com/bumptech/glide) for loading images.
 
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/123601466/236018938-78542381-4911-4c35-aaa0-e4ebe53e30b2.PNG" alt="Screenshot 1" width="400" height="600"> <img src="https://user-images.githubusercontent.com/123601466/236017910-ff9cd0b1-f4ae-430d-8396-89c21723155f.PNG" alt="Screenshot 2" width="400" height="600">
+<img src="https://user-images.githubusercontent.com/123601466/236588212-0b011cac-b694-41b4-a302-6279ff826437.PNG" alt="Screenshot 1" width="400" height="600"> 
+
+<img src="https://user-images.githubusercontent.com/123601466/236588214-40de0d28-2435-40f5-b573-2dcfd72e2e42.PNG" alt="Screenshot 2" width="400" height="600">
 
 
 ## License
